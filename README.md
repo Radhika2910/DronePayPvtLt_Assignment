@@ -21,9 +21,7 @@ Comment : Input Data
 {
   "input": "radar"
 }
-Output
-The output will be the result of the palindrome check based on the input data and the logic provided. For example, if the input data is as above, the output will be:
-**Large**
+Output: Large
 **Explanation of this code:**
 
 We first check if the input string is equal to its reverse, indicating a palindrome.
@@ -62,76 +60,7 @@ code used:
   ]
 }
 
-Certainly! Here's an updated README file to include both Task A and Task B explanations:
 
-JSONLogic Assignment README
-This README file provides an overview of the JSONLogic code for two tasks: Task A and Task B.
-
-Task A: Palindrome Checker
-JSONLogic Code
-The logic to determine if an input string is a palindrome is represented in JSONLogic code. Below is the JSONLogic code used:
-
-json
-Copy code
-{
-  "if": [
-    {"===": [{"reverse": {"var": "input"}}, {"var": "input"}]},
-    "Palindrome",
-    {
-      "if": [
-        {"===": [{"strlen": {"var": "input"}}, 3]},
-        "Not a Palindrome",
-        "Large"
-      ]
-    }
-  ]
-}
-Input Data
-To use the palindrome checker, provide input data in the form of a JSON object with a property named "input" representing the string to be checked. Here's a sample input:
-
-json
-Copy code
-{
-  "input": "radar"
-}
-Output
-The output will be the result of the palindrome check based on the input data and the logic provided. For example, if the input data is as above, the output will be:
-
-Copy code
-Palindrome
-This indicates that the input string "radar" is a palindrome.
-
-Task B: Transaction Score Calculator
-JSONLogic Code
-The logic to calculate the transaction score based on transaction amount and transaction count is represented in JSONLogic code. Below is the JSONLogic code used:
-
-json
-Copy code
-{
-  "if": [
-    {
-      "or": [
-        {"<": [{"var": "transactionamount"}, 10000]},
-        {"<": [{"var": "transactioncount"}, 5]},
-        {"===": [{"var": "transactionamount"}, null]},
-        {"===": [{"var": "transactioncount"}, null]}
-      ]
-    },
-    0,
-    {
-      "if": [
-        {
-          "and": [
-            {">=": [{"var": "transactionamount"}, 10000]},
-            {">=": [{"var": "transactioncount"}, 5]}
-          ]
-        },
-        100,
-        null
-      ]
-    }
-  ]
-}
 Input Data: 
 To use the transaction score calculator, provide input data in the form of a JSON object with two properties: "transactionamount" and "transactioncount". 
 {
