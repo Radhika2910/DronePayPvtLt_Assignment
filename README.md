@@ -1,4 +1,4 @@
-# DronePayPvtLt_Assignment
+# Drona Pay Pvt Lt Assignment
 JSONLogic Assignment
 **Task A :** If the input string has only 3 charecters, please check if it is a Pallindrome and give output "Pallindrome" or "Not a Pallindrome". If input string has more than 3 charecters then output is "Large". 
 
